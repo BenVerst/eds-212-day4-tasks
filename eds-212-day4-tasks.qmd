@@ -1,5 +1,39 @@
 ---
+this---
 title: "eds-212-day4-tasks"
 ---
 
 ## 
+
+```{r}
+library(GGally)
+library(skimr)
+library(tidyverse)
+```
+
+```{r}
+names(diamonds)
+
+dim(diamonds)
+
+head(diamonds)
+
+tail(diamonds)
+
+summary(diamonds)
+
+skim(diamonds)
+```
+
+```{r}
+ggpairs(diamonds)
+```
+
+```{r}
+ggplot(data = diamonds, aes(x = carat)) + geom_histogram(fill = "darkgreen", color = "brown") + theme_minimal()
+```
+
+```{r}
+ggplot(data = diamonds, aes(x = clarity, y = price)) + 
+geom_boxplot(fill = "darkblue",) + coord_flip()
+```
